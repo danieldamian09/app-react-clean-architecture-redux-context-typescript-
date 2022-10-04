@@ -15,11 +15,25 @@ const Home: React.FC<HomeInterface> = () => {
 			flex: 1,
 			minWidth: 150,
 			renderCell: (params: GridRenderCellParams) => <>{params.value}</>,
-		}
+		},
+		{
+			field: "category",
+			headerName: "Category",
+			flex: 1,
+			minWidth: 150,
+			renderCell: (params: GridRenderCellParams) => <>{params.value}</>,
+		},
+		{
+			field: "company",
+			headerName: "Company",
+			flex: 1,
+			minWidth: 150,
+			renderCell: (params: GridRenderCellParams) => <>{params.value}</>,
+		},
+		
 	];
 
 	return (
-		<div>
 			<DataGrid
 				rows={People}
 				columns={columns}
@@ -28,8 +42,8 @@ const Home: React.FC<HomeInterface> = () => {
 				autoHeight
 				pageSize={pageSize}
 				rowsPerPageOptions={[pageSize]}
+				getRowId={(row) => row.id}
 			/>
-		</div>
 	);
 };
 
