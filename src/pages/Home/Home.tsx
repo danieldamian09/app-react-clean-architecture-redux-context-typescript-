@@ -25,6 +25,8 @@ const Home: React.FC<HomeInterface> = () => {
 	const columns = [
 		{
 			field: "actions",
+			type: "actions",
+			sortable: false,
 			headerName: "",
 			minWidth: 50,
 			renderCell: (params: GridRenderCellParams) => <>{
