@@ -17,3 +17,5 @@ export const peopleSlice = createSlice({
   }
 
 });
+
+export const { addPeople } = peopleSlice.actions;
